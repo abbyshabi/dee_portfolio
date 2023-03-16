@@ -108,6 +108,8 @@ export default function Skills () {
                 >
                   <Paper
                     sx={{
+                      marginBottom: '1rem',
+                    //   margin: 'auto',
                       width: '20rem',
                       height: '5rem',
                       padding: 3,
@@ -159,6 +161,7 @@ export default function Skills () {
                 >
                   <Paper
                     sx={{
+                      marginBottom: '1rem',
                       width: '20rem',
                       height: '5rem',
                       padding: 3,

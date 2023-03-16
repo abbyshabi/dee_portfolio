@@ -107,10 +107,7 @@ export default function Skills () {
               <img
                 src={item.image}
                 alt={item.name}
-                // width={{lg:7, sm: 5}}
-                // width={'100rem'}
                 style={{ alignSelf: 'center', width: '20rem' }}
-                // style={{ alignSelf: 'center', width: {lg: 70, sm: 5} }}
               />
               <Typography fontSize={'1.7rem'} mt={'0.7rem'}>
                 {item.name}

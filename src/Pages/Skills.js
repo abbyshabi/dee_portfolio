@@ -80,13 +80,13 @@ export default function Skills () {
         height: '100vh',
         width: '100%',
         alignItems: 'center',
-        marginBottom: 0,
-        marginLeft: { sm: 2 }
+        // marginBottom: 0,
+        // marginLeft: { sm: 2 }
       }}
     >
       <Grid
         container
-        sx={{ ...style, margin: { lg: '5px 20px' } }}
+        sx={{ ...style, margin: { lg: '5px 20px' },  marginLeft: { sm: 2 }  }}
         spacing={2}
         alignItems='center'
         justifyContent='space-between'

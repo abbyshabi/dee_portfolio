@@ -70,11 +70,7 @@ export default function Skills () {
           lg={12}
           mb={2}
           sx={{
-            marginBottom: {
-              lg: '20px',
-              marginTop: { lg: 30, sm: 5 },
-              marginLeft: { sm: 10 }
-            }
+            marginTop: '20px',
           }}
         >
           <Typography
@@ -82,7 +78,7 @@ export default function Skills () {
             component='h5'
             fontWeight={400}
             fontSize={'1.5rem'}
-            mt={5}
+            mt={2}
           >
             {' '}
             We can always have a conversation....
@@ -92,9 +88,10 @@ export default function Skills () {
               sx={{
                 padding: 4,
                 borderRadius: 3,
-                marginTop: 5,
-                boxShadow: '8px 8px 16px 4px rgba(0,0,0,0.15)'
-                // width: {lg: '50rem', sm: '50rem'},
+                // width: '15rem',
+                marginTop: '3rem',
+                boxShadow: '8px 8px 16px 4px rgba(0,0,0,0.15)',
+                width: {lg: '50rem', sm: '15rem'},
               }}
             >
               <Grid container>
@@ -109,7 +106,7 @@ export default function Skills () {
                   <Paper
                     sx={{
                       marginBottom: '1rem',
-                      width: '20rem',
+                      width: '75%',
                       height: '5rem',
                       padding: 3,
                       display: 'flex',
@@ -161,7 +158,7 @@ export default function Skills () {
                   <Paper
                     sx={{
                       marginBottom: '1rem',
-                      width: '20rem',
+                      width: '75%',
                       height: '5rem',
                       padding: 3,
                       display: 'flex',

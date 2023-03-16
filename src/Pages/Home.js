@@ -11,7 +11,7 @@ export default function Home () {
         width: '100%',
         alignItems: 'center',
         padding: { lg: 5, sm: 5 },
-        marginBottom: 0
+        // marginBottom: 0
       }}
     >
       <Grid container sx={{ margin: { lg: '80px 20px' } }}>

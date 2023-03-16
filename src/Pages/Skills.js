@@ -80,8 +80,7 @@ export default function Skills () {
         height: '100vh',
         width: '100%',
         alignItems: 'center',
-        // marginBottom: 0,
-        // marginLeft: { sm: 2 }
+        marginTop: '12rem',
       }}
     >
       <Grid
@@ -95,13 +94,6 @@ export default function Skills () {
           item
           lg={12}
           mb={2}
-          sx={{
-            marginBottom: {
-              lg: '20px',
-              marginTop: { lg: 30, sm: 5 },
-              marginLeft: { sm: 10 }
-            }
-          }}
         >
           <Typography
             variant='span'

@@ -44,7 +44,8 @@ export default function Skills () {
       id='projects'
       style={{
         width: '100%',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: '12rem',
       }}
     >
       <Grid
@@ -58,13 +59,6 @@ export default function Skills () {
           item
           lg={12}
           mb={2}
-          sx={{
-            marginBottom: {
-              lg: '20px',
-              marginTop: { lg: 30, sm: 5 },
-              marginLeft: { sm: 10 }
-            }
-          }}
         >
           <Typography
             variant='span'
@@ -89,12 +83,12 @@ export default function Skills () {
           >
             <Paper
               sx={{
-                width: { lg: '50rem', sm: '50rem' },
+                width: '80%',
                 height: '30rem',
-                padding: 2,
                 backgroundColor: '#FFF',
                 border: '1px solid #eee',
                 borderRadius: 2,
+                padding: '2rem',
                 '&:hover': {
                   boxShadow: '0px 10px 14px #ffe6e6;'
                 },
@@ -107,7 +101,7 @@ export default function Skills () {
               <img
                 src={item.image}
                 alt={item.name}
-                style={{ alignSelf: 'center', width: '20rem' }}
+                style={{ alignSelf: 'center', width: '50%' }}
               />
               <Typography fontSize={'1.7rem'} mt={'0.7rem'}>
                 {item.name}

@@ -14,6 +14,7 @@ import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined'
 import MilitaryTechOutlinedIcon from '@mui/icons-material/MilitaryTechOutlined'
 import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import Image from '../assets/D_S_logo.png'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 export default function Index () {
@@ -34,6 +35,24 @@ export default function Index () {
       }}
     >
       <List sx={{ marginTop: 15 }}>
+      <ListItem>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                cursor: 'pointer'
+              }}
+            >
+                {/* <img
+              src={Image}
+              alt='Dammy'
+              height={100}
+              style={{ borderRadius: '100%', height: { lg: 100, sm: 100 } }}
+            /> */}
+             </Box>
+          </ListItem>
         <ListItem>
           <ListItemButton>
           <MUILink 

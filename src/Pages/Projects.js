@@ -43,34 +43,53 @@ export default function Skills () {
     <Box
       id='projects'
       style={{
-        // height: '100vh',
         width: '100%',
         alignItems: 'center'
       }}
     >
       <Grid
         container
-        sx={{ ...style, margin: { lg: '5px 20px' }, marginLeft: {sm: 2}}}
+        sx={{ ...style, margin: { lg: '5px 20px' }, marginLeft: { sm: 2 } }}
         spacing={2}
         alignItems='center'
         justifyContent='space-between'
       >
-        <Grid item lg={12} mb={2} sx={{ marginBottom: { lg: '20px' }, marginTop: {lg: 10} }}>
+        <Grid
+          item
+          lg={12}
+          mb={2}
+          sx={{
+            marginBottom: {
+              lg: '20px',
+              marginTop: { lg: 30, sm: 5 },
+              marginLeft: { sm: 10 }
+            }
+          }}
+        >
           <Typography
             variant='span'
             component='h5'
             fontWeight={400}
             fontSize={'1.5rem'}
+            mt={5}
           >
             {' '}
             Some cool apps I have built....
           </Typography>
         </Grid>
         {icons?.map(item => (
-          <Grid sx={{ ...style.item }} item xs={12} sm={12} md={12} lg={12} ml={3}>
+          <Grid
+            sx={{ ...style.item }}
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+            ml={3}
+          >
             <Paper
               sx={{
-                width: {lg: '50rem', sm: '50rem'},
+                width: { lg: '50rem', sm: '50rem' },
                 height: '30rem',
                 padding: 2,
                 backgroundColor: '#FFF',
@@ -90,7 +109,7 @@ export default function Skills () {
                 alt={item.name}
                 // width={{lg:7, sm: 5}}
                 // width={'100rem'}
-                style={{alignSelf: 'center', width: '20rem'}}
+                style={{ alignSelf: 'center', width: '20rem' }}
                 // style={{ alignSelf: 'center', width: {lg: 70, sm: 5} }}
               />
               <Typography fontSize={'1.7rem'} mt={'0.7rem'}>

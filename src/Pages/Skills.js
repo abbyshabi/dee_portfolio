@@ -81,7 +81,7 @@ export default function Skills () {
         width: '100%',
         alignItems: 'center',
         marginBottom: 0,
-        marginLeft :{ sm: 2}
+        marginLeft: { sm: 2 }
       }}
     >
       <Grid
@@ -91,13 +91,24 @@ export default function Skills () {
         alignItems='center'
         justifyContent='space-between'
       >
-         <Grid item lg={12} mb={2} sx={{ marginBottom : {lg: '20px'}, marginTop: {lg:10}}}>
+        <Grid
+          item
+          lg={12}
+          mb={2}
+          sx={{
+            marginBottom: {
+              lg: '20px',
+              marginTop: { lg: 30, sm: 5 },
+              marginLeft: { sm: 10 }
+            }
+          }}
+        >
           <Typography
             variant='span'
             component='h5'
             fontWeight={400}
             fontSize={'1.5rem'}
-            mt={'4rem'}
+            mt={5}
             // sx={{ textDecoration: 'underline' }}
           >
             {' '}

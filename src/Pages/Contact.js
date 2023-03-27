@@ -88,7 +88,6 @@ export default function Skills () {
               sx={{
                 padding: 4,
                 borderRadius: 3,
-                // width: '15rem',
                 marginTop: '3rem',
                 boxShadow: '8px 8px 16px 4px rgba(0,0,0,0.15)',
                 width: {lg: '50rem', sm: '15rem'},

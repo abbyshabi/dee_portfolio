@@ -1,139 +1,83 @@
 import React from 'react'
-import { Box, Grid, Typography, Paper } from '@mui/material'
-import JS from '../assets/javascript.svg'
-import Python from '../assets/python.png'
-import ReactImg from '../assets/react.svg'
-import CSS from '../assets/css.svg'
-import Git from '../assets/git.svg'
-import JQ from '../assets/jquery.svg'
-import SASS from '../assets/sass.svg'
-import VS from '../assets/vscode.svg'
-import HTML from '../assets/html.svg'
-import API from '../assets/api.svg'
+import { Box, Grid, Typography, Paper, Chip, useTheme } from '@mui/material'
+import { skills as skillsData } from '../assets/skillsData.js'
 
 export default function Skills () {
-  const style = {
-    display: 'inline-flex',
-    width: '80%',
-    marginTop: 10,
-    marginLeft: { sm: 2 },
-    item: {
-      padding: 3
+  const theme = useTheme()
+
+  const getChipColor = proficiency => {
+    if (proficiency === 'Beginner') {
+      return 'primary'
+    } else if (proficiency === 'Expert') {
+      return 'success'
+    } else if (proficiency === 'Advanced') {
+      return 'warning'
+    } else {
+      return 'default' // You can set a default color for other cases
     }
   }
-
-  const icons = [
-    {
-      image: JS,
-      name: 'Javascript'
-    },
-    {
-      image: Python,
-      name: 'Python'
-    },
-    {
-      image: ReactImg,
-      name: 'React'
-    },
-    {
-      image: CSS,
-      name: 'CSS'
-    },
-    {
-      image: Git,
-      name: 'Git'
-    },
-    {
-      image: JQ,
-      name: 'Jquery'
-    },
-    {
-      image: SASS,
-      name: 'SASS'
-    },
-    {
-      image: VS,
-      name: 'VS Code'
-    },
-    {
-      image: HTML,
-      name: 'HTML'
-    },
-    {
-      image: API,
-      name: 'Rest API'
-    },
-    {
-      image: HTML,
-      name: 'HTML'
-    },
-    {
-      image: API,
-      name: 'Rest API'
-    }
-  ]
 
   return (
     <Box
       id='skills'
       sx={{
-        height: '100vh',
-        width: '100%',
+        marginTop: 15,
         alignItems: 'center',
-        marginTop: '12rem',
+        padding: '8rem 0',
+        width: '100%',
+        minHeight: '100vh',
+        backgroundColor: theme.palette.background.default
       }}
     >
-      <Grid
-        container
-        sx={{ ...style, margin: { lg: '5px 20px' },  marginLeft: { sm: 2 }  }}
-        spacing={2}
-        alignItems='center'
-        justifyContent='space-between'
+      <Typography
+        variant='span'
+        component='h4'
+        fontWeight={400}
+        fontSize={'1.5rem'}
+        mb={5}
       >
-        <Grid
-          item
-          lg={12}
-          mb={2}
-        >
-          <Typography
-            variant='span'
-            component='h5'
-            fontWeight={400}
-            fontSize={'1.5rem'}
-            mt={5}
-            // sx={{ textDecoration: 'underline' }}
-          >
-            {' '}
-            The cool tools I work with....
-          </Typography>
-        </Grid>
-        {icons?.map(item => (
-          <Grid sx={{ ...style.item }} item xs={6} sm={6} md={4} lg={2}>
+        Some of the tools I love to tinker with include...
+      </Typography>
+      <Grid container spacing={3}>
+        {skillsData.map(skill => (
+          <Grid key={skill.name} item xs={12} sm={6} md={4} lg={3}>
             <Paper
               sx={{
-                width: '3rem',
-                height: '3rem',
-                padding: 2,
-                backgroundColor: '#FFF',
-                border: '1px solid #eee',
-                borderRadius: 2,
+                padding: '1rem',
+                display: 'flex',
+                height: '70%',
+                width: '60%',
+                flexDirection: 'column',
+                alignItems: 'center',
+                // height: '100%',
+                borderRadius: '12px',
+                background:
+                  'linear-gradient(to bottom right, #ffffff, #f3f3f3)',
+                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.3s ease',
                 '&:hover': {
-                  boxShadow: '0px 10px 14px #ffe6e6;'
-                },
-                pointer: 'cursor',
-                display: 'grid',
-                justifyContent: 'center',
-                alignItems: 'center'
+                  transform: 'scale(1.05)'
+                }
               }}
             >
               <img
-                src={item.image}
-                alt={item.name}
-                width={'30rem'}
-                style={{}}
+                src={skill.image}
+                alt={skill.name}
+                style={{ width: '70px', height: '50px', marginBottom: '1rem' }}
               />
-              <Typography fontSize={'0.7rem'} mt={'0.7rem'}>
-                {item.name}
+              <Typography variant='h6' mb={1}>
+                {skill.name}
+              </Typography>
+              <Typography
+                variant='span'
+                color='text.secondary'
+                mb={2}
+                component='p'
+              >
+                <Chip
+                  label={skill?.proficiency}
+                  color={getChipColor(skill?.proficiency)}
+                />
               </Typography>
             </Paper>
           </Grid>

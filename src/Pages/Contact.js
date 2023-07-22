@@ -53,9 +53,10 @@ export default function Skills () {
     <Box
       id='contact'
       style={{
-        height: '100vh',
+        alignItems: 'center',
+        padding: '8rem 0', // Adjust the padding as needed for each component
         width: '100%',
-        alignItems: 'center'
+        minHeight: '100vh', // Adjusted width
       }}
     >
       <Grid
@@ -70,7 +71,7 @@ export default function Skills () {
           lg={12}
           mb={2}
           sx={{
-            marginTop: '20px',
+            // marginTop: '20px',
           }}
         >
           <Typography
@@ -78,7 +79,6 @@ export default function Skills () {
             component='h5'
             fontWeight={400}
             fontSize={'1.5rem'}
-            mt={2}
           >
             {' '}
             We can always have a conversation....

@@ -1,40 +1,30 @@
 import React from 'react'
 import { Box, Grid, Typography, Paper } from '@mui/material'
-import topHire from '../assets/top-hire.png'
-import hood from '../assets/hood.png'
+import alo from '../assets/alo.png'
+import hood from '../assets/matching.png'
 import github from '../assets/github.png'
 
-export default function Skills () {
-  const style = {
-    display: 'inline-flex',
-    width: '80%',
-    marginTop: 10,
-    marginLeft: { sm: 2 },
-    item: {
-      //   padding: 3
-    }
-  }
-
+const Skills = () => {
   const icons = [
     {
-      image: topHire,
-      name: 'Top Hire',
+      image: alo,
+      name: 'Alo-App',
       about:
-        'Ever had a leaking pipe and wondered how you can get the best hands in the fastest time? That is what top-Hire does! An app built with Javascript, HTML and CSS. ',
-      repo: 'https://github.com/abbyshabi/Top-Hire'
+        '📖✨ Introducing Alo-App! ✨📖 Step into a world of enchanting stories and legendary characters. Alo, meaning "story" in Yoruba, is an indigenous app that celebrates rich cultural narratives. Built with Django, Postgres, and React, it weaves modern technology with timeless tales. Uncover the magic of our diverse heritage and embark on a captivating journey with "Alo-App"!',
+      repo: 'https://github.com/abbyshabi/Alo-app'
     },
     {
       image: hood,
-      name: 'Neighbourhood Watch',
+      name: 'Memory Game',
       about:
-        'Neigbourhood app is a django app. It helps connects the resisdents of a neighbourhood, it allows users make a comment, pass information and review shops in the neighbourhood',
-      repo: 'https://github.com/abbyshabi/Hoodz'
+        '🎮🃏 Get Ready to Match and Flip! 🃏🎮 🌟 This React-based memory game, crafted with Next.js and Sass, will put your memory and matching skills to the ultimate test. Flip cards and find those elusive matching pairs! Challenge yourself to complete the game using the fewest moves and secure the top spot on the high score list! 🏆🚀 Give it a whirl and see how sharp your memory really is! 💡💫',
+      repo: 'https://github.com/abbyshabi/Matching-game'
     },
     {
       image: github,
       name: 'Github Search',
       about:
-        'A github clone build using angular JS and bootstrap. You can search for users and repositories on the app',
+        'The GitHub Clone App is a web application that allows users to explore GitHub profiles and repositories seamlessly. Leveraging GitHub tokens and API, this app provides an interactive interface for users to discover essential information about GitHub users, their repositories, and contributions. It is built using Angular JS and Bootstrap.',
       repo: 'https://github.com/abbyshabi/Git-hub'
     }
   ]
@@ -42,80 +32,82 @@ export default function Skills () {
   return (
     <Box
       id='projects'
-      style={{
-        width: '100%',
+      sx={{
+        // display: 'flex',
+        // flexDirection: 'column',
         alignItems: 'center',
-        marginTop: '12rem',
+        padding: '8rem 0',
+        width: '90%',
+        minHeight: '100vh'
       }}
     >
-      <Grid
-        container
-        sx={{ ...style, margin: { lg: '5px 20px' }, marginLeft: { sm: 2 } }}
-        spacing={2}
-        alignItems='center'
-        justifyContent='space-between'
+      <Typography
+        variant='span'
+        component='h4'
+        fontWeight={400}
+        fontSize={'1.5rem'}
+        mb={5}
       >
-        <Grid
-          item
-          lg={12}
-          mb={2}
-        >
-          <Typography
-            variant='span'
-            component='h5'
-            fontWeight={400}
-            fontSize={'1.5rem'}
-            mt={5}
-          >
-            {' '}
-            Some cool apps I have built....
-          </Typography>
-        </Grid>
+        Here are some awesome apps I've crafted and tinkered with...
+      </Typography>
+      <Grid container spacing={3}>
         {icons?.map(item => (
-          <Grid
-            sx={{ ...style.item }}
-            item
-            xs={12}
-            sm={12}
-            md={12}
-            lg={12}
-            ml={3}
-          >
+          <Grid item xs={12} sm={6} md={4} key={item.name}>
             <Paper
               sx={{
-                width: '80%',
-                height: '30rem',
-                backgroundColor: '#FFF',
-                border: '1px solid #eee',
-                borderRadius: 2,
-                padding: '2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                p: '2rem',
+                height: '100%',
+                boxShadow: '0px 10px 14px #ffe6e6',
+                transition: 'box-shadow 0.3s ease-in-out',
                 '&:hover': {
-                  boxShadow: '0px 10px 14px #ffe6e6;'
-                },
-                pointer: 'cursor',
-                display: 'grid',
-                justifyContent: 'center',
-                alignItems: 'center'
+                  boxShadow: '0px 10px 20px #ffe6e6'
+                }
               }}
             >
               <img
                 src={item.image}
                 alt={item.name}
-                style={{ alignSelf: 'center', width: '50%' }}
+                style={{ width: '80%', marginBottom: '1rem', height: '25%' }}
               />
-              <Typography fontSize={'1.7rem'} mt={'0.7rem'}>
+              <Typography variant='span' component='h2'>
                 {item.name}
               </Typography>
-              <Typography>{item.about}</Typography>
-              <Typography fontSize={'1.2rem'} mt={'0.7rem'}>
+              <Typography variant='span' component='p' fontWeight={150}>
+                {item.about}
+              </Typography>
+              <Typography
+                variant='span'
+                component='h5'
+                fontWeight={400}
+                fontSize={'1.2rem'}
+                mb={2}
+              >
                 <a href={item.repo} target='_blank' rel='noreferrer'>
-                  Repo
+                  Link to Project
                 </a>
               </Typography>
             </Paper>
           </Grid>
         ))}
       </Grid>
+      <Typography
+        variant='span'
+        component='h4'
+        fontWeight={400}
+        fontSize={'1.5rem'}
+        mt={20} // Add some margin between project section and the new section
+      >
+        You can also check out some of my projects on{' '}
+        <a href='https://github.com/abbyshabi' target='_blank' rel='noreferrer'>
+          GitHub!
+        </a>
+      </Typography>
     </Box>
   )
 }
+
+export default Skills

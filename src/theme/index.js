@@ -7,6 +7,7 @@ const theme = createTheme({
     },
     status: {
       success: '#66bb6a',
+      preSuccess: '#43996d',
       failed: '#fc0303'
     },
     secondary: {

@@ -40,16 +40,15 @@ export default function Skills () {
       </Typography>
       <Grid container spacing={3}>
         {skillsData.map(skill => (
-          <Grid key={skill.name} item xs={12} sm={6} md={4} lg={3}>
+          <Grid key={skill.name} item xs={12} sm={6} md={4} lg={2.3}>
             <Paper
               sx={{
                 padding: '1rem',
                 display: 'flex',
-                height: '70%',
+                height: '60%',
                 width: '60%',
                 flexDirection: 'column',
                 alignItems: 'center',
-                // height: '100%',
                 borderRadius: '12px',
                 background:
                   'linear-gradient(to bottom right, #ffffff, #f3f3f3)',
@@ -74,10 +73,10 @@ export default function Skills () {
                 mb={2}
                 component='p'
               >
-                <Chip
+                {/* <Chip
                   label={skill?.proficiency}
                   color={getChipColor(skill?.proficiency)}
-                />
+                /> */}
               </Typography>
             </Paper>
           </Grid>

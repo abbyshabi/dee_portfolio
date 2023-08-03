@@ -5,6 +5,9 @@ import theme from './theme';
 import reportWebVitals from './reportWebVitals';
 import Layout from './Pages/Layout'
 import { ThemeProvider } from '@mui/material';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-4YFQH2HQ9X');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

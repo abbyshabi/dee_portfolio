@@ -8,16 +8,11 @@ export default function Home () {
     <>
      <Helmet>
         <title> Damilola Shabi | Software Developer</title>
-        {/* Add any other meta tags you want here */}
       </Helmet>
     <Box
       id='about'
       style={{
-        // height: '100vh',
-        // width: '100%',
-        // alignItems: 'center',
         padding: { lg: 5, sm: 5 },
-        // marginBottom: 0
       }}
     >
       <Grid container sx={{ margin: { lg: '80px 20px' } }}>

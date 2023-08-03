@@ -70,9 +70,6 @@ export default function Skills () {
           item
           lg={12}
           mb={2}
-          sx={{
-            // marginTop: '20px',
-          }}
         >
           <Typography
             variant='span'

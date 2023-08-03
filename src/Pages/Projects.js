@@ -36,7 +36,7 @@ const Skills = () => {
         // display: 'flex',
         // flexDirection: 'column',
         alignItems: 'center',
-        padding: '8rem 0',
+        padding: '2rem 0',
         width: '90%',
         minHeight: '100vh'
       }}
